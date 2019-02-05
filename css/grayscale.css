@@ -24,6 +24,10 @@
   font-family: 'Trade Winds', cursive;
 }
 
+#nav-name {
+  font-size: 2rem;
+}
+
 #mainNav {
   min-height: 56px;
   background-color: #1A0E1F;
@@ -136,7 +140,7 @@
 
 .masthead h2 {
   max-width: 25rem;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 
@@ -213,6 +217,17 @@
 
 .about-section p {
   margin-bottom: 5rem;
+}
+
+/********** PROJECTS **********/
+
+.my-work {
+  margin-bottom: 45px;
+  font-size: 30px;
+}
+
+.work-title {
+  font-size: 2.3rem;
 }
 
 .projects-section {
@@ -369,14 +384,14 @@ footer {
 .timeline>li:nth-child(even) {
     position: relative;
     margin-bottom: 50px;
-    height: 180px;
+    height: 250px;
     right:-100px;
 }
 
 .timeline>li:nth-child(odd) {
     position: relative;
     margin-bottom: 50px;
-    height: 180px;
+    height: 250px;
     left:-100px;
 }
 
@@ -395,7 +410,7 @@ footer {
   position: relative;
   float: left;
   width: 41%;
-  padding: 0 20px 20px 30px;
+  padding: 20px 20px 20px 30px;
   text-align: right;
 }
 
@@ -509,12 +524,12 @@ footer {
 /* Medium Devices, .visible-md-* */
 @media (min-width: 992px) and (max-width: 1199px) {
   .timeline > li:nth-child(even) {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     min-height: 0px;
     right: 0px;
   }
   .timeline > li:nth-child(odd) {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     min-height: 0px;
     left: 0px;
   }
@@ -553,7 +568,7 @@ footer {
     left: 0px;
   }
   .timeline>li:nth-child(even) .timeline-image {
-    left: 0;
+    left: -25px;
     margin-left: 0px;
   }
   .timeline>li:nth-child(odd) .timeline-image {
@@ -595,7 +610,20 @@ footer {
   .timeline>li:nth-child(even) .timeline-image {
     left: 0;
     margin-left: 0;
+    margin-top: 130px;
+    margin-bottom: 20px;
   }
+
+  #timeline-inverted-ga {
+    padding-top: 280px;
+    position: absolute;
+  }
+
+  #timeline-princesses {
+    padding-top: 790px;
+    /*position: absolute;*/
+  }
+
   .timeline>li:nth-child(odd) .timeline-image {
     float:right;
     left: 0px;
@@ -607,7 +635,7 @@ footer {
   }
   .timeline > li:nth-child(odd) .timeline-panel {
     width: 100%;
-    padding: 0 14px 20px 0px;
+    padding: 20px 14px 20px 0px;
   }
   .timeline > li .line {
     display: none;
