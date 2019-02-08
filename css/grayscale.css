@@ -24,6 +24,10 @@
   font-family: 'Trade Winds', cursive;
 }
 
+.container {
+    margin-bottom: 0px !important;
+}
+
 #nav-name {
   font-size: 2rem;
 }
