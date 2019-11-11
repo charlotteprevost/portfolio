@@ -4,15 +4,11 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 #bioshock {
-  /*font-family: 'Limelight', cursive;*/
   font-family: 'Poiret One', cursive;
-  /*font-family: 'Abril Fatface', cursive;*/
 }
 
 #andrewRyan {
   font-family: 'Limelight', cursive;
-  /*font-family: 'Poiret One', cursive;*/
-  /*font-family: 'Abril Fatface', cursive;*/
 }
 
 .emphasis {
@@ -50,8 +46,6 @@
 
 #mainNav .navbar-brand {
   font-family: 'Trade Winds', cursive;
-  /*font-family: 'Parisienne', cursive;*/
-  /*font-family: 'Hind Madurai', sans-serif;*/
   color: #85C1E9;
   font-weight: 500;
   padding: .9rem 0;
@@ -101,7 +95,6 @@
   }
   #mainNav.navbar-shrink .nav-link {
     color: #8A17B9;
-    /*text-shadow: 2px 1px 2px black;*/
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
@@ -133,7 +126,6 @@
 }
 
 .masthead h1 {
-  /*font-family: 'Varela Round';*/
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -201,19 +193,13 @@
 
 .about-section {
   padding-top: 10rem;
-  /*background: -webkit-gradient(linear, left top, left bottom, from(#1A0E1F), color-stop(75%, rgba(26, 14, 31, 0.9)), to(rgba(26, 14, 31, 0.8)));*/
-  /*background: linear-gradient(to bottom, #1A0E1F 0%, rgba(26, 14, 31, 0.9) 75%, rgba(26, 14, 31, 0.8) 100%);*/
-
   position: relative;
   width: 100%;
   height: auto;
   min-height: 35rem;
   padding: 15rem 0 5rem 0;
-/*  background: -webkit-gradient(linear, left top, left bottom, to(rgba(26, 14, 31, 0.1)), color-stop(75%, rgba(26, 14, 31, 0.5)), from(rgba(26, 14, 31, 1)));
-  background: linear-gradient(to top, rgba(26, 14, 31, 0.1) 0%, rgba(26, 14, 31, 0.5) 75%, rgba(26, 14, 31, 1) 100%);
-*/  
   background: rgb(26,14,31);
-  background: linear-gradient(0deg, rgba(26,14,31,1) 0%, rgba(0,0,0,1) 50%, rgba(26,14,31,1) 100%);  background-color: rgba(26, 14, 31, 0.5)
+  background: linear-gradient(0deg, rgba(26,14,31,1) 0%, rgba(0,0,0,1) 50%, rgba(26,14,31,1) 100%);  background-color: rgba(26, 14, 31, 0.5);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -236,9 +222,6 @@
 
 .projects-section {
   padding: 10rem 0;
-/*  background: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 9, 0, 0.1)), color-stop(75%, rgba(13, 9, 0, 0.5)), to(rgba(13, 9, 0, 0.8)));
-  background: linear-gradient(to bottom, rgba(13, 9, 0, 0.1) 0%, rgba(13, 9, 0, 0.5) 75%, rgba(13, 9, 0, 0.8) 100%);
-*/
   background: rgb(26,14,31);
   background: linear-gradient(0deg, rgba(26,14,31,1) 0%, rgba(0,0,0,1) 50%, rgba(26,14,31,1) 100%);
 }
@@ -272,17 +255,12 @@
 
 .signup-section {
   padding: 10rem 0;
-/*  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 14, 31, 0.1)), color-stop(75%, rgba(26, 14, 31, 0.5)), to(#1A0E1F)), url("../img/martin-adams-580191-unsplash.jpg");
-  background: linear-gradient(to bottom, rgba(26, 14, 31, 0.1) 0%, rgba(26, 14, 31, 0.5) 75%, #1A0E1F 100%), url("../img/martin-adams-580191-unsplash.jpg");
-*/  /*background: rgb(26,14,31)url("../img/martin-adams-580191-unsplash.jpg");*/
   background: linear-gradient(0deg, rgba(26,14,31,1) 0%, rgba(0,0,0,0.1) 50%, rgba(26,14,31,1) 100%), url("../img/martin-adams-580191-unsplash.jpg");  
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
-
-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,14,31,1) 50%, rgba(0,0,0,1) 100%)
 
 .signup-section .form-inline input {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
@@ -341,7 +319,6 @@ linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,14,31,1) 50%, rgba(0,0,0,1) 100%
 }
 
 body {
-  /*font-family: 'Hind Madurai', sans-serif;*/
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
 }
@@ -436,7 +413,6 @@ footer {
     z-index: 100;
     position: absolute;
     left: 50%;
-    /*border: 7px solid #8A17B9;*/
     border-radius: 100%;
     background-color: #8A17B9;
     box-shadow: 0 0 70px #8A17B9;
@@ -591,6 +567,10 @@ footer {
   }
   .timeline > li .line {
     display: none;
+  }
+  #projects-image-waxxy .float-right {
+    float: none;
+    /* justify-content: center; */
   }
 }
 /* Custom, iPhone Retina */
