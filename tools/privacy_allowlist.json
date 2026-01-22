@@ -1,0 +1,9 @@
+{
+  "allowed_emails": [
+    "prevost.c@proton.me"
+  ],
+  "allowed_email_domains": [
+    "proton.me"
+  ]
+}
+

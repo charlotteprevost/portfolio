@@ -1,0 +1,17 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node / tooling (later)
+node_modules/
+dist/
+.parcel-cache/
+.vite/
+
+# Logs
+*.log
+
+# Privacy: never publish local CV PDFs
+cv/
+*.pdf
+
