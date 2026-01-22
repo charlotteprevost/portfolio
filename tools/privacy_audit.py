@@ -97,7 +97,8 @@ def iter_files(root: Path) -> list[Path]:
             text=True,
         )
         files = [line.strip() for line in proc.stdout.splitlines() if line.strip()]
-        return [root / f for f in files if f]
+        out = [root / f for f in files if f]
+        return [p for p in out if p.exists()]
     except Exception:
         # Fallback: scan everything (best effort) while skipping .git
         out: list[Path] = []

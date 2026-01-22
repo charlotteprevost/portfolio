@@ -2,12 +2,6 @@
 .AppleDouble
 .LSOverride
 
-# Node / tooling (later)
-node_modules/
-dist/
-.parcel-cache/
-.vite/
-
 # Logs
 *.log
 

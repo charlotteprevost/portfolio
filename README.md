@@ -1,13 +1,20 @@
-# Portfolio (public)
+# Portfolio
 
-This repository is intentionally **scoped to `03_PORTFOLIO/site/` only** so no other CAREER materials can ever be pushed publicly by accident.
+Minimal static portfolio site. HTML + CSS only; no build step.
 
 ## GitHub Pages
 
-- GitHub Pages should serve from the **repository root**.
-- Entry point: `index.html` (redirects to `charlotte_prevost_gis_portfolio.html`).
+- **Source**: repository root
+- **Entry**: `index.html`
 
-## Safety rule
+## Local
 
-Only run git commands **inside this folder**.
+```bash
+python3 -m http.server 5173
+# open http://localhost:5173/
+```
 
+## Privacy
+
+- No CV/resume or PDFs in repo (see `.gitignore`).
+- Run `python3 tools/privacy_audit.py` before pushing.

@@ -1,43 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=charlotte_prevost_gis_portfolio.html" />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="Charlotte Prevost — GIS developer (GEOINT/remote sensing). Portfolio projects and contact." />
-    <title>Charlotte Prevost | GIS Portfolio</title>
-    <link rel="canonical" href="charlotte_prevost_gis_portfolio.html" />
-    <style>
-      body{
-        margin:0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-        background:#0b0f14;
-        color:rgba(255,255,255,.92);
-        display:grid;
-        place-items:center;
-        min-height:100vh;
-        padding:24px;
-      }
-      a{ color:#57d9a3; }
-      .card{
-        max-width:720px;
-        border:1px solid rgba(255,255,255,.12);
-        border-radius:14px;
-        padding:18px;
-        background: rgba(255,255,255,.04);
-      }
-      p{ color: rgba(255,255,255,.72); margin: 10px 0 0; }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <strong>Redirecting to portfolio…</strong>
-      <p>
-        If you aren’t redirected automatically, open
-        <a href="charlotte_prevost_gis_portfolio.html">the portfolio page</a>.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Charlotte Prevost — GIS Developer (GEOINT / remote sensing). Selected projects and contact." />
+  <meta name="author" content="Charlotte Prevost" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <meta property="og:title" content="Charlotte Prevost | GIS Portfolio" />
+  <meta property="og:description" content="GIS Developer (GEOINT / remote sensing). Selected projects and contact." />
+  <meta property="og:type" content="website" />
+
+  <title>Charlotte Prevost | GIS Portfolio</title>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:rgba(255,255,255,.05);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --border:rgba(255,255,255,.12);
+      --accent:#57d9a3;
+      --radius:14px;
+      --max: 980px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.55;
+    }
+    a{ color: var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    a:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
+
+    .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+    header{
+      padding: 44px 0 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .top{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    h1{ margin:0; font-size: 30px; letter-spacing: .2px; }
+    .role{ margin: 6px 0 0; color: var(--muted); }
+    nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a{
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,.03);
+      text-decoration: none;
+    }
+
+    main{ padding: 26px 0 44px; }
+    section{ padding: 22px 0; }
+    h2{ margin:0 0 10px; font-size: 18px; letter-spacing: .2px; }
+    p{ margin: 0 0 10px; color: var(--muted); }
+
+    .card{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .project h3{ margin: 0 0 6px; font-size: 16px; color: var(--text); }
+    .tags{ margin: 0 0 10px; padding: 0; list-style:none; display:flex; flex-wrap:wrap; gap: 6px; }
+    .tag{
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,.03);
+    }
+    .thumb{
+      height: 120px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: rgba(255,255,255,.03);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .meta{ margin: 0; color: var(--muted); font-size: 13px; }
+    .soon{
+      display:inline-block;
+      margin-top: 8px;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.03);
+    }
+
+    .contact{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      text-decoration:none;
+    }
+    .btn:hover{ background: rgba(255,255,255,.06); text-decoration:none; }
+
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 18px 0 28px;
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px){
+      .projects{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="top">
+        <div>
+          <h1>Charlotte Prevost</h1>
+          <p class="role">GIS Developer · GEOINT · Remote Sensing · Automation</p>
+        </div>
+        <nav aria-label="Site navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I build lightweight, reproducible geospatial workflows—turning tracking data and satellite imagery into clean layers, maps, and concise readouts.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Selected projects</h2>
+        <div class="projects">
+          <article class="card project">
+            <div class="thumb" aria-label="Dark vessel tracking preview (placeholder)">Dark vessel tracking</div>
+            <h3>Dark vessel tracking</h3>
+            <ul class="tags" aria-label="Project tags">
+              <li class="tag">Maritime</li>
+              <li class="tag">GEOINT</li>
+              <li class="tag">Python</li>
+              <li class="tag">QGIS</li>
+            </ul>
+            <p class="meta">
+              Automated pipeline to identify and map suspicious AIS gaps using Global Fishing Watch data and EEZ boundaries, producing GIS‑ready outputs.
+            </p>
+          </article>
+
+          <article class="card project">
+            <div class="thumb" aria-label="Chicago heatmap preview (placeholder)">Chicago heatmap</div>
+            <h3>Chicago nighttime satellite heatmap</h3>
+            <ul class="tags" aria-label="Project tags">
+              <li class="tag">Remote sensing</li>
+              <li class="tag">Raster</li>
+              <li class="tag">Visualization</li>
+            </ul>
+            <p class="meta">
+              Nighttime imagery heatmap workflow and cartographic styling for city‑scale comparison.
+            </p>
+            <span class="soon">Coming soon</span>
+          </article>
+
+          <article class="card project">
+            <div class="thumb" aria-label="Alps snowcover preview">
+              <img src="img/snow_cover.png" alt="Snowcover analysis preview image" />
+            </div>
+            <h3>Alps snowcover time analysis</h3>
+            <ul class="tags" aria-label="Project tags">
+              <li class="tag">Time series</li>
+              <li class="tag">Satellite</li>
+              <li class="tag">Trends</li>
+            </ul>
+            <p class="meta">
+              Time‑series processing to summarize snowcover dynamics across seasons and years.
+            </p>
+            <span class="soon">Coming soon</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>For opportunities and collaboration, reach out via email or LinkedIn.</p>
+        <div class="contact" aria-label="Contact links">
+          <a class="btn" href="mailto:prevost.c@proton.me">prevost.c@proton.me</a>
+          <a class="btn" href="https://www.linkedin.com/in/charlotte-prevost/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/charlotteprevost" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Charlotte Prevost
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  </script>
+</body>
 </html>
 
