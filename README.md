@@ -1,6 +1,7 @@
 # Portfolio
 
 Minimal static portfolio site. HTML + CSS only; no build step.
+This repository is intentionally scoped to only portfolio site content so no other private materials are pushed by accident.
 
 ## GitHub Pages
 
