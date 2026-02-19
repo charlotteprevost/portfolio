@@ -9,8 +9,9 @@
     .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px 42px; }
     .card { border: 1px solid rgba(255,255,255,.14); border-radius: 14px; background: rgba(255,255,255,.04); padding: 16px; margin-top: 16px; }
     a { color: #57d9a3; }
-    img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); margin-top: 10px; }
+    img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); margin-top: 10px; aspect-ratio: 16 / 9; object-fit: cover; }
     .muted { color: rgba(255,255,255,.72); }
+    .caption { color: rgba(255,255,255,.72); font-size: 14px; margin-top: 8px; }
   </style>
 </head>
 <body>
@@ -22,12 +23,14 @@
 
     <div class="card">
       <h2>All overlays view</h2>
-      <img src="../../img/lst_all_overlays.png" alt="Chicago LST map with all overlays displayed" />
+      <img src="../../img/lst_all_overlays_opt.jpg" alt="Chicago LST map with all overlays displayed" />
+      <p class="caption">Impact: combines thermal context with overlays to identify where heat risk intersects critical areas.</p>
     </div>
 
     <div class="card">
       <h2>Data center vs control view</h2>
-      <img src="../../img/lst_dc_vs_control.png" alt="Chicago LST comparison of data center and control areas" />
+      <img src="../../img/lst_dc_vs_control_opt.jpg" alt="Chicago LST comparison of data center and control areas" />
+      <p class="caption">Impact: supports clearer comparison between data-center zones and matched controls in one view.</p>
     </div>
   </div>
 </body>

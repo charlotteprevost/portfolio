@@ -9,8 +9,9 @@
     .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px 42px; }
     .card { border: 1px solid rgba(255,255,255,.14); border-radius: 14px; background: rgba(255,255,255,.04); padding: 16px; margin-top: 16px; }
     a { color: #57d9a3; }
-    img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); margin-top: 10px; }
+    img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); margin-top: 10px; aspect-ratio: 16 / 9; object-fit: cover; }
     .muted { color: rgba(255,255,255,.72); }
+    .caption { color: rgba(255,255,255,.72); font-size: 14px; margin-top: 8px; }
   </style>
 </head>
 <body>
@@ -22,12 +23,14 @@
 
     <div class="card">
       <h2>Cluster view</h2>
-      <img src="../../img/ms_dark_clusters.png" alt="Dark vessel clusters on maritime map" />
+      <img src="../../img/ms_dark_clusters_opt.jpg" alt="Dark vessel clusters on maritime map" />
+      <p class="caption">Impact: quickly surfaces high-suspicion maritime zones for first-pass analyst triage.</p>
     </div>
 
     <div class="card">
       <h2>Route inference view</h2>
-      <img src="../../img/ms_route_prediction.png" alt="Route prediction lines on maritime detections" />
+      <img src="../../img/ms_route_prediction_opt.jpg" alt="Route prediction lines on maritime detections" />
+      <p class="caption">Impact: adds movement context to detections, helping prioritize follow-up by route pattern.</p>
     </div>
   </div>
 </body>
