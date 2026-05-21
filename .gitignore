@@ -7,5 +7,8 @@
 
 # Privacy: never publish local CV PDFs
 cv/
+site/
 *.pdf
+# Public portfolio artifact (Alps analysis report)
+!projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf
 
