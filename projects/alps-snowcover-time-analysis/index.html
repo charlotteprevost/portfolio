@@ -3,60 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alps Snow Cover Trend Analysis | Charlotte Prevost</title>
+  <meta name="robots" content="index,follow" />
+  <meta name="description"
+    content="Alps snow cover trend analysis — static remote sensing portfolio piece with full report PDF." />
+  <title>Alps Snow Cover Trend Analysis | Charlotte Prévost</title>
   <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: rgba(255, 255, 255, 0.05);
+      --text: rgba(255, 255, 255, 0.92);
+      --muted: rgba(255, 255, 255, 0.72);
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #57d9a3;
+      --radius: 14px;
+      --max: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: #0b0f14;
-      color: rgba(255, 255, 255, .92);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
+
     .wrap {
-      max-width: 840px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 28px 18px 42px;
+      padding: 28px 18px 48px;
     }
-    a { color: #57d9a3; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .crumb {
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      line-height: 1.25;
+    }
+
+    .lede {
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+
+    .callout {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .callout strong {
+      color: var(--text);
+    }
+
     .card {
-      border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.04);
       padding: 16px;
-      margin-top: 16px;
+      margin-bottom: 18px;
     }
-    img {
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .pdf-frame-wrap {
+      position: relative;
+      width: 100%;
+      min-height: min(78vh, 920px);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .pdf-frame-wrap iframe,
+    .pdf-frame-wrap embed {
+      display: block;
+      width: 100%;
+      height: min(78vh, 920px);
+      border: 0;
+    }
+
+    .pdf-fallback {
+      padding: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pdf-fallback code {
+      font-size: 0.92em;
+      color: var(--text);
+    }
+
+    .thumb {
+      margin-top: 12px;
+    }
+
+    .thumb img {
       width: 100%;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, .12);
+      border: 1px solid var(--border);
       aspect-ratio: 16 / 9;
       object-fit: cover;
     }
-    .muted { color: rgba(255, 255, 255, .72); }
-    .caption { color: rgba(255,255,255,.72); font-size: 14px; margin-top: 8px; }
+
+    .caption {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    #methodology a {
+      word-break: break-word;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <p><a href="../../index.html">Back to portfolio</a></p>
-    <h1>Alps Snow Cover Trend Analysis</h1>
-    <p class="muted">
-      Remote sensing project focused on multi-year snow-cover dynamics in alpine regions.
+    <p class="crumb"><a href="../../index.html">← Back to portfolio</a></p>
+
+    <h1>Alps snow cover trend analysis</h1>
+    <p class="lede">
+      This is a <strong>non-interactive, static analysis portfolio piece</strong>: a reproducible remote sensing
+      workflow for multi-year snow-cover dynamics in alpine regions, documented in the report below.
     </p>
 
-    <div class="card">
-      <img src="../../img/snow_cover_opt.jpg" alt="Snow cover trend analysis map preview" />
-      <p class="caption">Impact: highlights multi-year snow-cover change patterns relevant to climate and water-resource risk.</p>
+    <div class="callout" role="note">
+      <strong>How to use this page.</strong> Scroll to the embedded report, or download the PDF for offline reading.
+      A public <strong>GitHub</strong> repository for code and methodology is planned; the project workspace on disk is
+      <code>webapps/alps_snowcover_time_analysis/</code> until it is published.
     </div>
 
-    <div class="card">
+    <div class="card" id="report">
+      <h2>Full report (PDF preview)</h2>
+      <p class="caption" style="margin-top:0">
+        If the preview is empty, add <code>artifacts/alps_snow_cover_analysis.pdf</code> next to this page and redeploy.
+      </p>
+      <div class="pdf-frame-wrap">
+        <iframe
+          id="pdf-frame"
+          title="Alps snow cover analysis PDF"
+          style="display: none;"
+          src="about:blank"
+        ></iframe>
+        <div id="pdf-fallback" class="pdf-fallback">
+          <p><strong>PDF not found.</strong> Place your report at:</p>
+          <p><code>site/projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf</code></p>
+          <p>Mirror the same path under <code>webapps/alps_snowcover_time_analysis/artifacts/</code> for the future repo.</p>
+        </div>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 14px;">
+        <a id="pdf-download" href="artifacts/alps_snow_cover_analysis.pdf" download hidden>Download PDF</a>
+      </p>
+    </div>
+
+    <div class="card thumb">
+      <img src="../../img/snow_cover_opt.jpg" alt="Snow cover trend analysis map preview" width="1200" height="675" loading="lazy" />
+      <p class="caption">
+        Visual summary: multi-year snow-cover change patterns relevant to climate and water-resource risk framing.
+      </p>
+    </div>
+
+    <div class="card" id="methodology">
       <h2>Project focus</h2>
       <ul>
         <li>Build a reproducible workflow for snow-cover trend analysis across years.</li>
         <li>Compute trend and anomaly signals that support climate and water-resource narratives.</li>
         <li>Produce clear visual outputs suitable for technical and non-technical audiences.</li>
       </ul>
+      <p style="margin: 14px 0 0; font-size: 14px; color: var(--muted);">
+        Methodology and code will live in the forthcoming GitHub repository (same layout as
+        <code>alps_snowcover_time_analysis/</code> in your <code>webapps</code> workspace).
+      </p>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var url = "artifacts/alps_snow_cover_analysis.pdf";
+      var frame = document.getElementById("pdf-frame");
+      var fallback = document.getElementById("pdf-fallback");
+      var dl = document.getElementById("pdf-download");
+
+      fetch(url, { method: "HEAD", cache: "no-store" })
+        .then(function (res) {
+          if (!res.ok) throw new Error("missing");
+        })
+        .then(function () {
+          frame.removeAttribute("srcdoc");
+          frame.src = url + "#view=FitH";
+          frame.style.display = "block";
+          fallback.style.display = "none";
+          if (dl) {
+            dl.hidden = false;
+            dl.setAttribute("href", url);
+          }
+        })
+        .catch(function () {
+          frame.style.display = "none";
+          fallback.style.display = "block";
+          if (dl) dl.hidden = true;
+        });
+    })();
+  </script>
 </body>
 </html>
