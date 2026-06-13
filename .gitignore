@@ -9,6 +9,8 @@
 cv/
 site/
 *.pdf
+# Local-only symlink to scaffold audit tool (breaks GitHub Pages if committed)
+tools/audit_github_repos.py
 # Public portfolio artifact (Alps analysis report)
 !projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf
 
