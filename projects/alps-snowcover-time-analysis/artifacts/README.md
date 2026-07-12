@@ -1,3 +1,7 @@
-Place your report PDF in this folder as **`alps_snow_cover_analysis.pdf`**. The project page embeds it automatically when the file is present.
+Place your report PDF in this folder as **`alps_snow_cover_analysis.pdf`**. The project page will embed it automatically when the file is present and the page is updated to enable the PDF preview.
 
-Keep a copy in the analysis repo under `projects/alps_snowcover_time_analysis/artifacts/` (symlinked from `webapps/alps_snowcover_time_analysis/`).
+Copy the same file to the analysis repo under `alps_snowcover_time_analysis/artifacts/`.
+
+When ready to publish, place the PDF at:
+
+`portfolio/projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf`

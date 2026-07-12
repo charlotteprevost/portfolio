@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow" />
   <meta name="description"
-    content="Alps snow cover trend analysis — static remote sensing portfolio piece with full report PDF." />
+    content="Alps snow cover trend analysis — static remote sensing portfolio piece." />
   <title>Alps Snow Cover Trend Analysis | Charlotte Prévost</title>
   <style>
     :root {
@@ -88,35 +88,6 @@
       font-size: 1.05rem;
     }
 
-    .pdf-frame-wrap {
-      position: relative;
-      width: 100%;
-      min-height: min(78vh, 920px);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.35);
-    }
-
-    .pdf-frame-wrap iframe,
-    .pdf-frame-wrap embed {
-      display: block;
-      width: 100%;
-      height: min(78vh, 920px);
-      border: 0;
-    }
-
-    .pdf-fallback {
-      padding: 20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .pdf-fallback code {
-      font-size: 0.92em;
-      color: var(--text);
-    }
-
     .thumb {
       margin-top: 12px;
     }
@@ -143,10 +114,6 @@
     li {
       margin-bottom: 6px;
     }
-
-    #methodology a {
-      word-break: break-word;
-    }
   </style>
 </head>
 <body>
@@ -155,37 +122,13 @@
 
     <h1>Alps snow cover trend analysis</h1>
     <p class="lede">
-      This is a <strong>non-interactive, static analysis portfolio piece</strong>: a reproducible remote sensing
-      workflow for multi-year snow-cover dynamics in alpine regions, documented in the report below.
+      A <strong>non-interactive, static analysis portfolio piece</strong>: a reproducible remote sensing
+      workflow for multi-year snow-cover dynamics in alpine regions.
     </p>
 
     <div class="callout" role="note">
-      <strong>How to use this page.</strong> Scroll to the embedded report, or download the PDF for offline reading.
-      A public <strong>GitHub</strong> repository for code and methodology is planned; the project workspace on disk is
-      <code>webapps/alps_snowcover_time_analysis/</code> until it is published.
-    </div>
-
-    <div class="card" id="report">
-      <h2>Full report (PDF preview)</h2>
-      <p class="caption" style="margin-top:0">
-        If the preview is empty, add <code>artifacts/alps_snow_cover_analysis.pdf</code> next to this page and redeploy.
-      </p>
-      <div class="pdf-frame-wrap">
-        <iframe
-          id="pdf-frame"
-          title="Alps snow cover analysis PDF"
-          style="display: none;"
-          src="about:blank"
-        ></iframe>
-        <div id="pdf-fallback" class="pdf-fallback">
-          <p><strong>PDF not found.</strong> Place your report at:</p>
-          <p><code>site/projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf</code></p>
-          <p>Mirror the same path under <code>webapps/alps_snowcover_time_analysis/artifacts/</code> for the future repo.</p>
-        </div>
-      </div>
-      <p style="margin: 12px 0 0; font-size: 14px;">
-        <a id="pdf-download" href="artifacts/alps_snow_cover_analysis.pdf" download hidden>Download PDF</a>
-      </p>
+      <strong>Report coming soon.</strong> The full PDF write-up and public GitHub repository for code and
+      methodology are in preparation. This page summarizes the analysis scope and visual outputs below.
     </div>
 
     <div class="card thumb">
@@ -202,40 +145,7 @@
         <li>Compute trend and anomaly signals that support climate and water-resource narratives.</li>
         <li>Produce clear visual outputs suitable for technical and non-technical audiences.</li>
       </ul>
-      <p style="margin: 14px 0 0; font-size: 14px; color: var(--muted);">
-        Methodology and code will live in the forthcoming GitHub repository (same layout as
-        <code>alps_snowcover_time_analysis/</code> in your <code>webapps</code> workspace).
-      </p>
     </div>
   </div>
-
-  <script>
-    (function () {
-      var url = "artifacts/alps_snow_cover_analysis.pdf";
-      var frame = document.getElementById("pdf-frame");
-      var fallback = document.getElementById("pdf-fallback");
-      var dl = document.getElementById("pdf-download");
-
-      fetch(url, { method: "HEAD", cache: "no-store" })
-        .then(function (res) {
-          if (!res.ok) throw new Error("missing");
-        })
-        .then(function () {
-          frame.removeAttribute("srcdoc");
-          frame.src = url + "#view=FitH";
-          frame.style.display = "block";
-          fallback.style.display = "none";
-          if (dl) {
-            dl.hidden = false;
-            dl.setAttribute("href", url);
-          }
-        })
-        .catch(function () {
-          frame.style.display = "none";
-          fallback.style.display = "block";
-          if (dl) dl.hidden = true;
-        });
-    })();
-  </script>
 </body>
 </html>
