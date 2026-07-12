@@ -28,4 +28,4 @@ python3 -m http.server 5173   # serve the site locally on port 5173
 
 - No private CV/resume in the public site (see `.gitignore`).
 - Run `python3 tools/privacy_audit.py` before pushing (portfolio-repo specific).
-- For a broader audit across repos, run `python3 tools/audit_github_repos.py` (symlink to `PRIVATE/98_TOOLS/privacy_audit/audit_github_repos.py`; recreate with `bash PRIVATE/98_TOOLS/install_layout_symlinks.sh`).
+- For a broader audit across repos, run `python3 ../../../../98_tools/privacy_audit/audit_github_repos.py` from this repo (or recreate the local symlink with `bash PRIVATE/98_TOOLS/install_layout_symlinks.sh`).

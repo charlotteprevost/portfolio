@@ -1,14 +1,24 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.cursor/
+.cursorignore
+agent_digest/
+agent-transcripts/
 
 # Logs
 *.log
+
+# Python cache artifacts
+__pycache__/
+*.py[cod]
 
 # Privacy: never publish local CV PDFs
 cv/
 site/
 *.pdf
+# Local-only symlink to scaffold audit tool (breaks GitHub Pages if committed)
+tools/audit_github_repos.py
 # Public portfolio artifact (Alps analysis report)
 !projects/alps-snowcover-time-analysis/artifacts/alps_snow_cover_analysis.pdf
 
